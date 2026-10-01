@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="logo-area">
+            <div class="logo">GT</div>
+            <div>
+                <h1>GameTrack</h1>
+                <p>Sua biblioteca de jogos</p>
+            </div>
+        </div>
+        <button id="temaBtn" class="btn-tema" type="button">☾ Modo escuro</button>
+    </header>
+
+    <main class="container">
+        <section id="mensagem" class="mensagem" aria-live="polite"></section>
+
+        <section class="dashboard">
+            <div class="stat-card">
+                <span>Total de jogos</span>
+                <strong id="totalJogos">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Jogando</span>
+                <strong id="totalJogando">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Finalizados</span>
+                <strong id="totalFinalizados">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Média das notas</span>
+                <strong id="mediaNotas">0.0</strong>
+            </div>
+        </section>
+
+        <section class="painel">
+            <div class="secao-titulo">
+                <div>
+                    <span class="etiqueta">BIBLIOTECA</span>
+                    <h2>Meus jogos</h2>
+                </div>
+                <span id="contadorResultados" class="contador">0 jogos</span>
+            </div>
+
+            <div class="controles">
+                <label class="campo-busca">
+                    <span>⌕</span>
+                    <input id="pesquisa" type="search" placeholder="Pesquisar jogo pelo título...">
+                </label>
+
+                <label>
+                    <span class="label-controle">Status</span>
+                    <select id="filtroStatus">
+                        <option value="Todos">Todos</option>
+                        <option value="Quero jogar">Quero jogar</option>
+                        <option value="Jogando">Jogando</option>
+                        <option value="Finalizado">Finalizado</option>
+                        <option value="Abandonado">Abandonado</option>
+                    </select>
+                </label>
+
+                <label>
+                    <span class="label-controle">Ordenar</span>
+                    <select id="ordenacao">
+                        <option value="padrao">Padrão</option>
+                        <option value="tituloAsc">Título A-Z</option>
+                        <option value="notaDesc">Nota maior-menor</option>
+                        <option value="notaAsc">Nota menor-maior</option>
+                    </select>
+                </label>
+            </div>
+
+            <div id="listaJogos" class="lista-jogos"></div>
+        </section>
+
+        <section class="painel formulario-painel">
+            <div class="secao-titulo">
+                <div>
+                    <span class="etiqueta">CRUD</span>
+                    <h2 id="tituloFormulario">Cadastrar novo jogo</h2>
+                </div>
+            </div>
+
+            <form id="jogoForm" novalidate>
+                <input type="hidden" id="jogoId">
+
+                <div class="form-grid">
+                    <label>
+                        <span>Título</span>
+                        <input id="titulo" type="text" placeholder="Ex.: EA FC 26" required>
+                    </label>
+
+                    <label>
+                        <span>Gênero</span>
+                        <input id="genero" type="text" placeholder="Ex.: Esporte" required>
+                    </label>
+
+                    <label>
+                        <span>Plataforma</span>
+                        <input id="plataforma" type="text" placeholder="Ex.: PC" required>
+                    </label>
+
+                    <label>
+                        <span>Nota</span>
+                        <input id="nota" type="number" min="0" max="10" step="0.1" placeholder="0 a 10" required>
+                    </label>
+
+                    <label>
+                        <span>Status</span>
+                        <select id="status" required>
+                            <option value="">Selecione</option>
+                            <option value="Quero jogar">Quero jogar</option>
+                            <option value="Jogando">Jogando</option>
+                            <option value="Finalizado">Finalizado</option>
+                            <option value="Abandonado">Abandonado</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="acoes-form">
+                    <button class="btn-principal" type="submit" id="salvarBtn">Cadastrar jogo</button>
+                    <button class="btn-secundario" type="button" id="cancelarBtn">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>GameTrack • Projeto de API com JSON Server + JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

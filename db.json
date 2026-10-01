@@ -1,0 +1,53 @@
+{
+  "jogos": [
+    {
+      "titulo": "EA FC 26",
+      "genero": "Esporte",
+      "plataforma": "PlayStation 5",
+      "nota": 10,
+      "status": "Jogando",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "titulo": "Fortnite",
+      "genero": "Battle Royale",
+      "plataforma": "PC",
+      "nota": 8,
+      "status": "Jogando"
+    },
+    {
+      "id": "3",
+      "titulo": "Rocket League",
+      "genero": "Esporte",
+      "plataforma": "PC",
+      "nota": 8,
+      "status": "Quero jogar"
+    },
+    {
+      "titulo": "Call of Duty",
+      "genero": "Tiro",
+      "plataforma": "PlayStation 5",
+      "nota": 8.5,
+      "status": "Finalizado",
+      "id": "4"
+    },
+    {
+      "titulo": "Minecraft",
+      "genero": "Sandbox",
+      "plataforma": "PC",
+      "nota": 9,
+      "status": "Abandonado",
+      "id": "6"
+    },
+    {
+      "titulo": "Hollow Knight",
+      "genero": "Metroidvania",
+      "plataforma": "PC",
+      "nota": 10,
+      "status": "Finalizado",
+      "id": "-vinfErTjAU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
